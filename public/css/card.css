@@ -1,0 +1,79 @@
+:root {
+  --bg: #1083e0;
+  --main: #fbfbfb;
+}
+
+body{
+  background-color: var(--main);
+}
+
+.main{
+  background-color: var(--main);
+}
+
+.background {
+  background-color: var(--bg);
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 200px; /* Set a specific width */
+  height: 2px;
+  background-color: var(--bg);
+}
+
+.underline-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 375px; /* Set a specific width */
+  height: 2px;
+  background-color: var(--bg);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 576px) {
+  .underline::after {
+    width: 45%; /* Adjust the width for smaller screens */
+  }
+  .underline-card::after {
+    width: 65%; /* Adjust the width for smaller screens */
+  }
+}
+.checkbox-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.card {
+  transition: background-color 0.3s, border 0.3s;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.card.selected {
+  background-color: #f8d7da;
+  border-color: red;
+}
+
+
+
+
+
